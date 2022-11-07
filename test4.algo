@@ -1,0 +1,32 @@
+PROCEDURE dot_product(v1,v2:ARRAY_OF_INTEGER[],ps:INTEGER)
+VAR
+i:INTEGER
+l:v1.length-1 ;
+s:v2.length-1 ; 
+BEGIN
+IF (l<>s) THEN
+        write ("vectors are not equal")
+    else 
+FOR i FROM 0 TO l STEP 1 DO
+ps+=v1[i]*v2[i]
+
+ END_FOR
+ END_IF
+IF (ps==0) THEN
+write ("vectors are orthogonals")
+   END_IF
+END
+ALGORITHM tableau
+VAR
+  V : ARRAY_OF array[]
+  i,j:INTEGER  
+  n:=V.length-1
+BEGIN
+   whrite ("donner les vecteur")
+   Read (V)
+   FOR i FROM 0 TO n STEP 1  DO
+  FOR j FROM i+1 TO n  STEP step  DO
+    dot_product(v[i],v[j])
+  END_FOR
+   END_FOR
+END
